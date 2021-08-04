@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{FF58A4F4-EC81-40CC-AD62-CEF655C38614}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Backup</RootNamespace>
+    <AssemblyName>Backup</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RunCodeAnalysis>False</RunCodeAnalysis>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdaugaCopiere.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdaugaCopiere.Designer.cs">
+      <DependentUpon>AdaugaCopiere.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdaugaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdaugaForm.Designer.cs">
+      <DependentUpon>AdaugaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdaugaFTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdaugaFTP.Designer.cs">
+      <DependentUpon>AdaugaFTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdaugaMYSQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdaugaMYSQL.Designer.cs">
+      <DependentUpon>AdaugaMYSQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BackupService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BackupService.Designer.cs">
+      <DependentUpon>BackupService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigForm.Designer.cs">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificaCopiere.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificaCopiere.Designer.cs">
+      <DependentUpon>ModificaCopiere.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificaFTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificaFTP.Designer.cs">
+      <DependentUpon>ModificaFTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificaMYSQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificaMYSQL.Designer.cs">
+      <DependentUpon>ModificaMYSQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProjectInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProjectInstaller.Designer.cs">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="accepta.ico" />
+    <None Include="addBackupHard.ico" />
+    <None Include="app.config" />
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CopyFrom.ico" />
+    <None Include="CopyTo.ico" />
+    <None Include="editBackupHard.ico" />
+    <None Include="exitOrDelete.ico" />
+    <None Include="FileCopy.ico" />
+    <None Include="ftp-transfer.ico" />
+    <None Include="harddrive.ico" />
+    <None Include="harddrive.png" />
+    <None Include="Misc-Web-Database-icon.ico" />
+    <None Include="Remove.ico" />
+    <None Include="settingsHammer.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AdaugaCopiere.resx">
+      <DependentUpon>AdaugaCopiere.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdaugaForm.resx">
+      <DependentUpon>AdaugaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdaugaFTP.resx">
+      <DependentUpon>AdaugaFTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdaugaMYSQL.resx">
+      <DependentUpon>AdaugaMYSQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackupService.resx">
+      <DependentUpon>BackupService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigForm.resx">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificaCopiere.resx">
+      <DependentUpon>ModificaCopiere.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificaFTP.resx">
+      <DependentUpon>ModificaFTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificaMYSQL.resx">
+      <DependentUpon>ModificaMYSQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectInstaller.resx">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
